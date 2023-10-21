@@ -1,0 +1,212 @@
+
+:root{
+    --f-size1:     64px ;
+    --f-w:700;
+    /*  للعناوين  */
+    --f-size2:     40px   ;
+    --f-w: 600;
+    --mb:1.5rem;
+    /*  تجت العناوين p */
+    --f-size3:     15px ;
+    --mt:3rem;
+    --f-size4:     64px ;
+    --section-pt-pb:100px;
+    --text-color:#8492a6 ;
+    --nav-color:#3c4858;
+    --box-shadow:0 10px 33px rgba(0,0,0,0.1);
+    --nav-size-font:11px;
+    --color:#f765a3;
+    --color2:#ffa4b6;
+    --color3:#f9d1d1;
+    --color4:#0b1354;
+    --color5:#165ba9;
+    --color6:#a155b9;
+    --color-w:#FFf;
+    --f-size-hoem:24px;
+}
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+
+    scroll-behavior: smooth;
+    transition: all .2s linear;
+    margin: 0;
+    padding: 0;
+}
+.postion-absolute{
+    position: absolute;
+}
+
+.postion-relative{
+    position: relative;
+}
+.padding-top-100{
+    padding-top:100px;
+
+}
+.padding-bottom-100{
+    padding-bottom: 100px;
+}
+.width-100{
+    width: 100%;
+}
+.height-100{
+    height: 100%;
+}
+.d-flex{
+    display: flex;
+}
+/*  START TEXT */
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+/*  END TEXT */
+body{
+    overflow-x: hidden;
+}
+/* START CONTANER */
+.container{
+    margin: auto;
+    padding-left: 15px ;
+
+    padding-right: 15px;
+}
+@media (max-width :767px) {}
+
+@media (min-width :768px) {
+    .container {
+        width: 750px;
+    }
+
+
+}
+
+
+@media (min-width :992px) {
+    .container {
+        width: 970px;
+
+
+    }
+}
+
+@media (min-width :1200px) {
+    .container {
+        width: 1170px;
+    }
+
+}
+/* END CONTANER */
+
+/* Card small */
+
+
+.ol-cards,
+.ol-cards * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media (max-width :768px){
+    .ol-cards{
+        /* width:calc( 100% /2  - 10px) !important; */
+      flex-wrap: wrap;
+      width: min(100%);
+    }
+    
+}
+.ol-cards {
+    display: flex !important;
+  --flapWidth: 2rem;
+  --flapHeigth: 1rem;
+  --iconSize: 3rem;
+  --numberSize: 3rem;
+  --colGapSize: 2rem;
+  /* width: min(100%, 40rem); */
+  width: calc(100%);
+  margin-inline: auto;
+  display: grid;
+  gap: 2rem;
+  padding-inline-start: var(--flapWidth);
+  font-family: sans-serif;
+  color: #222;
+  counter-reset: ol-cards-count;
+  list-style: none;
+}
+.ol-cards .col > li {
+  display: grid;
+  /* grid-template-areas:
+    "icon title nr"
+    "icon descr nr"; */
+    grid-template-areas:
+    "    nr  title  icon"
+    "   nr  descr icon ";
+  gap: 0 var(--colGapSize);
+  align-items: center;
+  padding: var(--colGapSize) var(--flapWidth) var(--colGapSize) 0;
+  border-radius: 1rem 5rem 5rem 1rem;
+  background-image: linear-gradient(to bottom right, #e9eaec, #ffffff);
+  counter-increment: ol-cards-count;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.25));
+  box-shadow: inset 2px 2px 2px white, inset -1px -1px 1px rgba(0, 0, 0, 0.25);
+  margin-top: 1rem;
+}
+ol-cards  .col> li > .title {
+    grid-area: title;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  .ol-cards  .col> li > .descr {
+    grid-area: descr;
+  }
+  .ol-cards .col> li::after {
+    grid-area: nr;
+    content: counter(ol-cards-count, decimal-leading-zero);
+    color: var(--accent-color);
+    font-size: var(--numberSize);
+    font-weight: 700;
+  }
+  @media (max-width: 40rem) {
+    .ol-cards {
+      --flapWidth: 1rem;
+      --flapHeigth: 0.5rem;
+      --iconSize: 2rem;
+      --numberSize: 2rem;
+      --colGapSize: 1rem;
+    }
+  }
+  
+/*  */
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+}
+.card-title {
+    margin-bottom: 0.5rem !important;
+    font-weight: 500;
+    line-height: 1.2;
+text-align: center;
+}
+.card .img img{
+    width: 100%;
+}

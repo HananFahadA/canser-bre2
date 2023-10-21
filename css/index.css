@@ -1,0 +1,268 @@
+/*  */
+
+.btn{
+    width: 200px;
+    height: 69px;
+    border: none;
+    background: #f9d1d1;
+    border-radius: 9%;
+    font-weight: bold;
+    color: var(--color);
+    margin-top: 7%;
+}
+
+.btn a{
+    color: var(--color) !important;
+}
+
+/* START */
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+   
+    background-color: var( --color);
+    /* background-color: #fff; */
+    padding: 1rem 7%;
+    justify-content: space-between;
+    align-items: center;z-index:10000;
+    box-shadow: var(--box-shadow);
+    color: var(--color-w);
+    z-index: 10000;
+}
+header .logo{
+    font-size: 2.5rem;
+}
+@media (max-width :767px){
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-top:.1rem solid  rgba(0,0,0,.2) ;
+        border-bottom:.1rem solid  rgba(0,0,0,.2) ;
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0,100% 0, 0 0 );
+    }
+    
+}
+header .navbar a{
+    font-size: var(--nav-size-font*2);
+    padding: 2rem 1.5rem;
+    /* color: var(--nav-color); */
+    color: var(--color-w);
+    text-decoration: none;
+
+}
+@media (max-width :767px){
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0,100% 100%, 0 100% );
+    }
+    header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem ;
+        font-size: 2rem;
+        background-color:var(--color);
+    }
+}
+header .navbar a:hover{
+    /* background-color: var(--color); */
+    background-color: #fff;
+    color: var(--color2);
+}
+header .bx-menu{
+    display: none;
+}
+
+@media (max-width :767px){
+    header .bx-menu{
+        display: inline-block;
+    }
+
+    .slideshow-container{
+        
+        height: 43vw !important;
+    }
+}
+
+
+/*  */
+
+
+/* START   home*/
+.home {
+    /* background-color: var( --color);  */
+    background: url("../tbl_articles_article_30983_531b32065ae-8066-42de-b70e-2c99654d21d0.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-w);
+    /* background: url(../your-breast-cancer-treatment-team.webp); */
+}
+/* .home .content{
+    width: 50vw;
+} */
+.home .content  h2{
+    font-size: var(--f-size1);
+}
+.home .content  p{
+    font-size: var( --f-size-hoem);
+    color: var(--color3);
+    text-align: right !important;
+    
+    margin: 37px;
+}
+/* END home */
+
+/* START   home*/
+.home {
+    /* background-color: var( --color);  */
+    background: url("../tbl_articles_article_30983_531b32065ae-8066-42de-b70e-2c99654d21d0.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-w);
+    height: 100vh;
+    /* background: url(../your-breast-cancer-treatment-team.webp); */
+}
+/* .home .content{
+    width: 50vw;
+} */
+.home .content  h2{
+    font-size: var(--f-size1);
+}
+.home .content  p{
+    font-size: var( --f-size-hoem);
+    color: var(--color3);
+    text-align: right !important;
+    
+    margin: 37px;
+}
+/* END home */
+
+
+/* about-canser */
+.about-canser{
+background-color: #f9d1d1;
+position: relative;
+}
+.about-canser::after{
+    position: absolute;
+    top: 0;
+    right:  0;
+    content: "";
+    width: 60px;
+    background: #ffa4b6;
+    height: 100%;
+}
+ p{
+    font-size: var( --f-size3);
+    text-align: center;
+    line-height: 1.5;
+}
+h3{
+    font-size:var(--f-size2) ;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--color);
+}
+.about-canser .boxes{
+    
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-canser .box {
+    width:calc( 50% - 10px);
+    padding: 10px;
+}
+.about-canser img{
+    border: 9px solid #ffffff;
+    border-radius: 8%;
+    margin-right: 7%;
+    width: 100% ;
+}
+
+
+
+/* START location */
+.location .content {
+
+    justify-content:space-between;
+    align-items: center;
+    min-width: 400px;
+
+    flex-wrap: wrap;
+}
+.location .content .box{
+    width:  213px;
+    height: 186px;
+    padding: 20px 35px;
+    background-color: var(  --color3);
+    margin-bottom: 36px;
+    position: relative;
+    border-radius: 23%;
+
+}
+.location .content .box::after{
+    position: absolute;
+    top: 0%;
+    left: 64%;
+    width: 36%;
+    height: 36%;
+    background-color: var(--color2);
+    z-index: 1000000000000000000000000;
+    border-radius: 0 0 0 100%;
+}
+.location .content .box:nth-child(4)::after{
+    content: url(../bxs-log-in.svg);
+   
+}
+.location .content .box:nth-child(1)::after{
+    content: url(../bxs-log-in.svg);
+
+}
+.location .content .box:nth-child(2)::after{
+    content: url(../bxs-log-in.svg);
+
+}
+.location .content .box:nth-child(3)::after{
+    content: url(../bxs-log-in.svg);
+
+}
+.location .content .box p{
+    line-height: 26px;
+    text-align: center;
+    margin-top: 39%;
+}
+/* END location */
+/* START blogs */
+.blogs .boxes{
+
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.blogs  .card {
+    width:calc( 100% / 4 - 10px);
+    padding: 10px;
+}
+.blogs .card .card-title{
+    color: var(--color) !important;
+}
+
+
+/*  */
+
+
+/* footer */
+.footer{
+    background-color: var(--color);
+ 
+}
+.footer .container{
+    padding: 20px 10px !important;
+}
+
+/* footer */
